@@ -87,3 +87,7 @@ clf.fit(X, y)
 # Predicción
 print("Etiqueta predicha:", clf.predict([[2., 2.]]))
 ```
+
+##BITACORA
+(9/04/2024) Inicia la página del ejemplo. 
+            ESTADO: en desarrollo.

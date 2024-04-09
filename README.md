@@ -24,6 +24,50 @@ SVM es ampliamente utilizado en una variedad de aplicaciones, incluyendo:
 - Bioinformática.
 - Predicción financiera, entre otros.
 
+## Ejemplo (C++)
+Aquí hay un ejemplo básico de cómo usar SVM en C++ utilizando la biblioteca de aprendizaje automático de código abierto, LIBSVM:
+
+```cpp
+#include <iostream>
+#include "svm.h"
+
+int main() {
+    // Datos de entrenamiento
+    svm_problem prob;
+    prob.l = 3;
+    prob.y = new double[prob.l] {1, -1, 1};
+    prob.x = new svm_node*[prob.l];
+    prob.x[0] = new svm_node[3] { {1, 1}, {2, 1}, {-1, 1} };
+    prob.x[1] = new svm_node[3] { {1, 1}, {2, -1}, {-1, 1} };
+    prob.x[2] = new svm_node[3] { {1, -1}, {2, 1}, {-1, 1} };
+
+    // Configuración del modelo SVM
+    svm_parameter param;
+    param.svm_type = C_SVC;
+    param.kernel_type = RBF;
+    param.gamma = 0.5;
+    param.C = 1;
+
+    // Entrenamiento del modelo
+    svm_model* model = svm_train(&prob, &param);
+
+    // Predicción
+    svm_node x[3] { {1, 1}, {2, 1}, {-1, 1} };
+    double pred_label = svm_predict(model, x);
+
+    std::cout << "Etiqueta predicha: " << pred_label << std::endl;
+
+    // Limpieza
+    svm_free_and_destroy_model(&model);
+    delete[] prob.y;
+    delete[] prob.x[0];
+    delete[] prob.x[1];
+    delete[] prob.x[2];
+    delete[] prob.x;
+
+    return 0;
+}
+
 ## Ejemplo
 ```python
 from sklearn import svm

@@ -72,7 +72,18 @@ int main() {
 ## Ejemplo (Python)
 ```python
 from sklearn import svm
+from sklearn import svm
+
+# Datos de entrenamiento
 X = [[0, 0], [1, 1]]
 y = [0, 1]
+
+# Configuración del modelo SVM
 clf = svm.SVC()
+
+# Entrenamiento del modelo
 clf.fit(X, y)
+
+# Predicción
+print("Etiqueta predicha:", clf.predict([[2., 2.]]))
+```

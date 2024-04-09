@@ -69,7 +69,7 @@ int main() {
 }
 ```
 
-## Ejemplo
+## Ejemplo (Python)
 ```python
 from sklearn import svm
 X = [[0, 0], [1, 1]]

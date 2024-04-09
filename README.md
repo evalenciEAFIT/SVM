@@ -89,6 +89,6 @@ print("Etiqueta predicha:", clf.predict([[2., 2.]]))
 ```
 ---
 ## BITACORA
-- (Fecha: <span style="color:red;">9<span style="color:black;">/abril</span>/2024</span>)( <br>
+- (9/abril/2024) <br>
     Inicia la página del ejemplo.
 > ESTADO: en desarrollo.

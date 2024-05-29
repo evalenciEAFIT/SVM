@@ -28,10 +28,10 @@ El término b es esencial para ajustar la posición del hiperplano, especialment
 
 Juntos, W y b definen la ecuación del hiperplano en el espacio de características:
 
-\[ w^T \cdot x + b = 0 \]
+\[ w<sup>T</sup> * x + b = 0 \]
 
 donde:
-- \( w^T \) es la transpuesta del vector de peso W
+- \( w<sup>T</sup> \) es la transpuesta del vector de peso W
 - \( x \) es el punto de datos de entrada
 - \( b \) es el término de sesgo
 

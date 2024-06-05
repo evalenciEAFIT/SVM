@@ -2,6 +2,8 @@
 
 En las Máquinas de Vectores de Soporte (SVM), las variables **W** y **b** desempeñan papeles cruciales en la definición del hiperplano que separa los puntos de datos pertenecientes a diferentes clases.
 
+![Descripción general](SVM01.png)
+
 ## W (Vector de Peso)
 
 ### Definición
